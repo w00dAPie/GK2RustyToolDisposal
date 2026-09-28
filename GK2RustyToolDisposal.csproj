@@ -4,52 +4,55 @@
     <LangVersion>latest</LangVersion>
     <Nullable>disable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
-    <Version>0.1.0</Version>
+
     <AssemblyName>GK2RustyToolDisposal</AssemblyName>
     <RootNamespace>GK2RustyToolDisposal</RootNamespace>
+
+    <Version>0.2.0</Version>
+    <AssemblyVersion>0.2.0.0</AssemblyVersion>
+    <FileVersion>0.2.0.0</FileVersion>
+
     <Deterministic>true</Deterministic>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <GameDir Condition="'$(GameDir)' == ''"
-      >G:\SteamLibrary\steamapps\common\Graveyard Keeper 2</GameDir>
-    <ManagedDir>$(GameDir)\GraveyardKeeper2_Data\Managed</ManagedDir>
-    <BepInExCore>$(GameDir)\BepInEx\core</BepInExCore>
-  </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Verification\**\*.cs" />
-    <Compile Remove="decompiled\**" />
-    <EmbeddedResource Remove="decompiled\**" />
-    <None Remove="decompiled\**" />
-  </ItemGroup>
+    <ManagedDir>$(GameDir)\GraveyardKeeper2_Data\Managed</ManagedDir>
+    <BepInExDir>$(GameDir)\BepInEx\core</BepInExDir>
+  </PropertyGroup>
 
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
       <HintPath>$(ManagedDir)\Assembly-CSharp.dll</HintPath>
       <Private>false</Private>
     </Reference>
+
     <Reference Include="LazyBearTechnology">
       <HintPath>$(ManagedDir)\LazyBearTechnology.dll</HintPath>
       <Private>false</Private>
     </Reference>
+
     <Reference Include="UnityEngine">
       <HintPath>$(ManagedDir)\UnityEngine.dll</HintPath>
       <Private>false</Private>
     </Reference>
+
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>$(ManagedDir)\UnityEngine.CoreModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
+
     <Reference Include="UnityEngine.UI">
       <HintPath>$(ManagedDir)\UnityEngine.UI.dll</HintPath>
       <Private>false</Private>
     </Reference>
+
     <Reference Include="BepInEx">
-      <HintPath>$(BepInExCore)\BepInEx.dll</HintPath>
+      <HintPath>$(BepInExDir)\BepInEx.dll</HintPath>
       <Private>false</Private>
     </Reference>
+
     <Reference Include="0Harmony">
-      <HintPath>$(BepInExCore)\0Harmony.dll</HintPath>
+      <HintPath>$(BepInExDir)\0Harmony.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>

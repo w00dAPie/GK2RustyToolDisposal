@@ -16,8 +16,9 @@ public sealed class Plugin : BaseUnityPlugin
     public const string Name = "Rusty Tool Disposal";
     public const string Version = "0.2.0";
 
-    private static readonly Dictionary<string, string> DebugStates =
-        new Dictionary<string, string>(StringComparer.Ordinal);
+    private static readonly Dictionary<string, string> DebugStates = new Dictionary<string, string>(
+        StringComparer.Ordinal
+    );
 
     private Harmony harmony;
     internal static bool Ready { get; private set; }

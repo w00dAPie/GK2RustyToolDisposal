@@ -2,17 +2,25 @@
 
 ## 0.2.0
 
-- Add `armor_0` (Rusty) and `armor_1` (Bronze) to the supported items. Both use the same rules as the tools: native Study Table completion, introduction checks, and a verified better armor worn in the toolbelt.
-- Rusty armor is replaced by `armor_1`, `armor_2` or `armor_3`. Bronze armor is replaced by `armor_2` or `armor_3`. `armor_4` is deliberately not included.
-- Allow the discard check when no network manager exists (single player). A manager that is co-op or not initialized still keeps items protected.
-- Add a config file with `EnableDebugLogging` (section `90 - Debug`, default `false`). When enabled, the log explains why an item is protected or allowed.
-- Add config migration for a legacy `[Debug]` section.
-- Runtime validation: the rusty tools and `armor_0` were discarded successfully in game. `armor_1` has not been confirmed yet.
+- Add armor support using the same safety rules as the existing tools: native Study Table completion, completed introduction progression, and a verified better replacement currently equipped.
+- Support the following armor upgrade paths:
+  - `armor_0` can be replaced by `armor_1`, `armor_2`, or `armor_3`.
+  - `armor_1` can be replaced by `armor_2` or `armor_3`.
+  - `armor_4` is deliberately excluded.
+- Allow discard checks when no network manager exists, which is the expected singleplayer case. If a network manager exists but is not initialized or indicates co-op, supported items remain protected.
+- Add the `EnableDebugLogging` configuration option under the `90 - Debug` section. It defaults to `false`.
+- When debug logging is enabled, log the reason why a supported item is either protected or allowed to be destroyed.
+- Add migration support for the legacy `[Debug]` configuration section.
+- Runtime validation:
+  - All five rusty starter tools were successfully discarded in game.
+  - `armor_0` was successfully discarded in game.
+  - `armor_1` support is implemented but has not yet been confirmed through an in-game discard test.
 
 ## 0.1.0
 
-- Enable native Destroy for five verified rusty starter tools after native Study Table completion.
-- Require an equipped upgrade, completed introduction checks, and safe ownership/equipment/use state.
-- Recheck safety at execution; preserve native mouse/controller callbacks and UID removal.
-- Fail closed on unknown game builds, unavailable state, or co-op.
-- No custom save data, global item mutation, or personal mod dependencies.
+- Enable the native Destroy action for five verified rusty starter tools after native Study Table completion.
+- Require an equipped upgrade, completed introduction checks, and a safe ownership, equipment, and usage state.
+- Recheck all safety conditions when the Destroy action is executed.
+- Preserve the game's native mouse and controller callbacks as well as UID-based inventory removal.
+- Fail closed on unsupported game builds, unavailable game state, or co-op sessions.
+- Add no custom save data, global item mutations, or personal mod dependencies.

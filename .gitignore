@@ -1,14 +1,24 @@
 # Build output
-bin/
-obj/
 [Bb]in/
 [Oo]bj/
+build/
 
-# Decompiled game code (urheberrechtlich geschuetzt, nicht veroeffentlichen)
+# Local machine configuration
+Directory.Build.props
+
+# Decompiled game code
 decompiled/
 
-# Lokale Verifikationsprojekte / Tools
+# Release output
+release/
+release-temp/
+thunderstore/
+*.zip
+
+# Local verification / investigation
 Verification/
+VERIFICATION.md
+INVESTIGATION.md
 
 # IDE / Editor
 .vs/
@@ -18,7 +28,7 @@ Verification/
 *.suo
 *.csproj.user
 
-# Logs und temporaere Dateien
+# Logs and temporary files
 *.log
 *.tmp
 
@@ -26,7 +36,10 @@ Verification/
 Thumbs.db
 .DS_Store
 Desktop.ini
-# Lokale Pruef- und Untersuchungsunterlagen
-Verification/
-VERIFICATION.md
-INVESTIGATION.md
+
+# Thunderstore / publishing
+.thunderstore-token
+publish.ps1
+thunderstore.toml
+tools_header.png
+icon.png

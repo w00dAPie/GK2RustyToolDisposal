@@ -55,9 +55,7 @@ internal static class RustyToolHelper
         switch (rustyId)
         {
             case "armor_0":
-                return upgradeId == "armor_1"
-                    || upgradeId == "armor_2"
-                    || upgradeId == "armor_3";
+                return upgradeId == "armor_1" || upgradeId == "armor_2" || upgradeId == "armor_3";
             case "armor_1":
                 return upgradeId == "armor_2" || upgradeId == "armor_3";
             case "axe_0":
