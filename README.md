@@ -2,7 +2,7 @@
 
 Standalone BepInEx 5 / Harmony mod for Graveyard Keeper 2, targeting .NET Framework 4.7.2.
 
-Version: **0.1.0**  
+Version: **0.2.0**  
 GUID: `de.w00dst0ckOo.gk2.rustytooldisposal`
 
 The vanilla inventory **Destroy** action becomes available for a studied, obsolete rusty starter tool when all safety checks pass. Nothing is automatically deleted.
