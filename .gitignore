@@ -1,0 +1,28 @@
+# Build output
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+
+# Decompiled game code (urheberrechtlich geschuetzt, nicht veroeffentlichen)
+decompiled/
+
+# Lokale Verifikationsprojekte / Tools
+Verification/
+
+# IDE / Editor
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.csproj.user
+
+# Logs und temporaere Dateien
+*.log
+*.tmp
+
+# OS
+Thumbs.db
+.DS_Store
+Desktop.ini
