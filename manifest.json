@@ -1,6 +1,6 @@
 {
   "name": "GK2RustyToolDisposal",
-  "version_number": "0.2.0",
+  "version_number": "0.2.1",
   "website_url": "https://github.com/w00dAPie/Graveyard-Keeper-2-Rusty-Tool-Disposal",
   "description": "Safely allows obsolete rusty starter tools and armor to be destroyed after they have been studied and replaced with upgraded equipment.",
   "dependencies": [

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.1
+
+- Remove strict game build hash validation that could disable the mod after unrelated game updates.
+- Fix Harmony patch registration for the inventory destroy checks.
+- Restore disposal functionality after the latest Graveyard Keeper 2 update.
+- Keep vanilla protection behavior when the mod's safety checks fail.
+
 ## 0.2.0
 
 - Add armor support using the same safety rules as the existing tools: native Study Table completion, completed introduction progression, and a verified better replacement currently equipped.
